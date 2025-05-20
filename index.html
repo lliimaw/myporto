@@ -1,84 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liam's Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e1e4e, #3c005f);
-            color: white;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            border-radius: 10px;
-        }
-        h1, h2, h3 {
-            color: #ffffff;
-        }
-        .intro, .skills, .achievements, .contact {
-            margin-bottom: 40px;
-        }
-        .skills ul, .achievements ul {
-            list-style: none;
-            padding: 0;
-        }
-        .skills li, .achievements li {
-            margin-bottom: 15px;
-        }
-        .info-box {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 10px;
-        }
-        .contact p {
-            margin: 5px 0;
-        }
-        img.profile {
-            width: 150px;
-            border-radius: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liam's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e1e4e, #0f0f2c);
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: auto auto auto;
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .intro-img {
+      grid-column: 1;
+      grid-row: 1 / 2;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .intro-img img {
+      border-radius: 50%;
+      width: 200px;
+    }
+
+    .intro-text {
+      grid-column: 2;
+      grid-row: 1 / 2;
+    }
+
+    .contact {
+      grid-column: 3;
+      grid-row: 1 / 2;
+      line-height: 1.8em;
+    }
+
+    .skills-achievements {
+      grid-column: span 3;
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .skills, .achievements {
+      flex: 1;
+    }
+
+    .skills ul {
+      padding-left: 20px;
+    }
+
+    .section-title {
+      font-size: 1.8em;
+      font-weight: bold;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+
+    .achievement-item {
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: #87cefa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="intro">
-            <h1>HELLO, I'm Liam</h1>
-            <p>As a student of the Digital Business program at <strong>Universitas Widya Dharma Pontianak</strong>, I leverage artificial intelligence technology, specifically OpenAI's ChatGPT, to support my academic activities and professional competency development. This technology is utilized across various aspects, including research, content creation, and digital marketing strategies.</p>
-        </div>
-        <img src="c:\Users\galah\OneDrive\Pictures\473826760_3248336085296664_6724614553959850152_n.jpg" alt="Liam playing guitar" width="150">
-        <br>
-        <br>
-        <div class="contact info-box">
-            <h3>Contact</h3>
-            <p><a href: "https://maps.app.goo.gl/n8xA4jP3oMc7NjVk9" target="_blank"> </a>📍 Gang Bersatu, no. 36</p>
-            <p>📞 081257539366</p>
-            <p>📧 william.hendri003@gmail.com</p>
-        </div>
-
-        <div class="skills info-box">
-            <h2>SKILLS</h2>
-            <ul>
-                <li><strong>Data Analysis and Interpretation</strong><br>Proficient in analyzing and interpreting data using tools like Excel and Google Analytics.</li>
-                <li><strong>Digital Marketing and SEO</strong><br>Skilled in SEO, social media marketing, and content creation.</li>
-                <li><strong>Data Visualization and Design</strong><br>Experienced in tools like Tableau and Power BI to visualize complex data.</li>
-            </ul>
-        </div>
-
-        <div class="achievements info-box">
-            <h2>ACHIEVEMENT</h2>
-            <ul>
-                <li><strong>1st Place in Infographic Competition</strong> @ DigCoFest Go International<br>Organized by Universitas Negeri Surabaya. Topic: digital transformation and sustainability.</li>
-                <li><strong>3rd Place in International Business Plan Competition</strong><br>Hosted by Universitas Ibn Khaldun Bogor. Theme: "Explore and Develop Your Business Idea for a Brighter Future."</li>
-                <li><strong>2nd Place in NUDC & KDMI Faculty-Level Debate</strong><br>Excellent communication and argumentation skills in national and faculty-level competitions.</li>
-            </ul>
-        </div>
+  <div class="container">
+    <div class="intro-img">
+      <img src="c:\Users\galah\OneDrive\Pictures\473826760_3248336085296664_6724614553959850152_n.jpg" alt="Liam's Photo">
     </div>
+
+    <div class="intro-text">
+      <h1>HELLO<br>I'm Liam</h1>
+      <p>
+        As a student of the Digital Business program at <strong>Universitas Widya Dharma Pontianak</strong>,
+        I leverage artificial intelligence technology, specifically OpenAI's ChatGPT, to support my academic
+        activities and professional competency development. This technology is utilized across various aspects,
+        including research, content creation, and digital marketing strategies.
+      </p>
+    </div>
+
+    <div class="contact">
+      <p>📍 <a href="https://maps.app.goo.gl/xyVnEdZWP4KGw7UR8" target="_blank">Gang Bersatu, no. 36</a></p>
+      <p>📞 081257539366</p>
+      <p>📧 <a href="mailto:william.hendri003@gmail.com">william.hendri003@gmail.com</a></p>
+    </div>
+
+    <div class="skills-achievements">
+      <div class="skills">
+        <div class="section-title">SKILLS</div>
+        <ul>
+          <li><strong>Data Analysis and Interpretation</strong><br>Proficient in analyzing and interpreting data to inform strategic decisions. Tools: Excel, Google Analytics.</li>
+          <li><strong>Digital Marketing and SEO</strong><br>Experienced in SEO, content marketing, and digital marketing strategies.</li>
+          <li><strong>Data Visualization and Design</strong><br>Skilled in Tableau and Power BI for complex data presentations and effective decision-making.</li>
+        </ul>
+      </div>
+
+      <div class="achievements">
+        <div class="section-title">ACHIEVEMENT</div>
+        <div class="achievement-item">
+          <strong>1st Place</strong> in Infographic Competition at DigCoFest Go International<br>
+          Collaborated with a team to win 1st place in a competition by Universitas Negeri Surabaya.
+        </div>
+        <div class="achievement-item">
+          <strong>3rd Place</strong> in International Business Plan Competition<br>
+          Held by Universitas Ibn Khaldun Bogor with the theme “Explore and Develop Your Business Idea for a Brighter Future.”
+        </div>
+        <div class="achievement-item">
+          <strong>2nd Place</strong> in NUDC & KDMI Faculty-Level Debate Selection<br>
+          Won 2nd place in the National University Debating Championship and Indonesian Student Debate Competition.
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
